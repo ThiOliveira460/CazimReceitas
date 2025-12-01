@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cazim — Lasanha à Bolonhesa</title>
 
 <style>
@@ -39,10 +39,7 @@
 
 *{ box-sizing:border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
-
+html { scroll-behavior: smooth; }
 
 body{
   margin:0;
@@ -81,15 +78,12 @@ header.cabecalho{
   justify-content: center;
 }
 
-
 .logo{
   width:82px;
   height:82px;
   border-radius:14px;
   overflow:hidden;
 }
-
-
 
 /* MENU */
 nav.menu{ display:flex; gap:20px; }
@@ -117,30 +111,14 @@ nav.menu a:hover{
   border:1px solid var(--busca-borda);
   padding:10px 12px;
   border-radius:999px;
+  width: 260px;
 }
 
 .busca input{
   border:0;
   outline:0;
   background:transparent;
-  width:260px;
-}
-
-.busca button{
-  background:var(--botao-vermelho);
-  color:white;
-  border:0;
-  padding:10px 12px;
-  border-radius:8px;
-  font-weight:700;
-  font-size:var(--fonte-peq);
-  cursor:pointer;
-  transition:0.15s;
-}
-
-.busca button:hover{
-  background:var(--botao-vermelho-hover);
-  transform:translateY(-2px);
+  width:100%;
 }
 
 /* TAGS */
@@ -153,7 +131,6 @@ nav.menu a:hover{
   font-size:var(--fonte-peq);
   font-weight:700;
 }
-.tag:hover{ background:#703400; cursor:pointer; }
 
 /* BREADCRUMB */
 .breadcrumb{
@@ -169,7 +146,6 @@ nav.menu a:hover{
   gap:26px;
 }
 
-/* RECEITA */
 .receita{
   background:white;
   padding:20px;
@@ -183,8 +159,6 @@ nav.menu a:hover{
   color:var(--titulo);
 }
 
-.meta{ color:var(--muted); font-size:var(--fonte-peq); }
-
 .imagem-principal{
   margin-top:18px;
   height:260px;
@@ -193,7 +167,6 @@ nav.menu a:hover{
   background-position:center;
 }
 
-/* CAIXAS */
 .caixa{
   background:white;
   padding:16px;
@@ -201,9 +174,9 @@ nav.menu a:hover{
   box-shadow:0 6px 14px var(--sombra);
   margin-bottom:24px;
 }
-.caixa h3{ margin:0 0 12px; }
 
 .passos{ display:flex; flex-direction:column; gap:16px; }
+
 .passo{ display:flex; gap:14px; }
 
 .thumb{
@@ -214,7 +187,7 @@ nav.menu a:hover{
   background-position:center;
 }
 
-/* SIDEBAR — SOMENTE OUTRAS RECEITAS */
+/* SIDEBAR */
 .lateral{ display:flex; flex-direction:column; gap:18px; }
 
 .bloco{
@@ -242,40 +215,7 @@ nav.menu a:hover{
   background-position:center;
 }
 
-/* BOTÕES (para cursos também!) */
-.botao-vermelho{
-  background:var(--botao-vermelho);
-  color:white;
-  padding:10px 14px;
-  border-radius:8px;
-  font-size:var(--fonte-peq);
-  font-weight:700;
-  display:inline-block;
-  cursor:pointer;
-  transition:0.15s;
-}
-
-.botao-vermelho:hover{
-  background:var(--botao-vermelho-hover);
-  transform:translateY(-3px);
-}
-
-.botao-borda{
-  border:1px solid var(--botao-borda);
-  padding:10px 14px;
-  border-radius:8px;
-  display:inline-block;
-  cursor:pointer;
-  font-weight:700;
-  font-size:var(--fonte-peq);
-}
-
-.botao-borda:hover{
-  border-color:#8b6d3b;
-  transform:translateY(-2px);
-}
-
-/* CURSOS (abaixo, 3 colunas) */
+/* CURSOS */
 .cursos{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -289,76 +229,83 @@ nav.menu a:hover{
   box-shadow:0 6px 16px rgba(0,0,0,0.05);
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
 }
 
 .curso .preco{
   color:var(--botao-vermelho);
   font-weight:700;
-
 }
 
-/* ============================================
-   RESPONSIVIDADE GERAL — ATÉ 980px
-   ============================================ */
-/* ===============================
-   HEADER RESPONSIVO — até 768px
-   =============================== */
-@media (max-width: 768px) {
-
-  /* Caixa principal do header */
- /* ======= HEADER RESPONSIVO (CELULAR) ======= */
-/* ======= HEADER RESPONSIVO (CELULAR) ======= */
-@media (max-width: 768px) {
-
-  header.cabecalho {
-    padding: 18px;
-    gap: 18px;
-  }
-
-  .topo-cabecalho {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    text-align: center;
-  }
-
-  .logo {
-    width: 110px;
-    height: 110px;
-  }
-
-  nav.menu {
-    width: 100%;
-    overflow-x: auto;
-    display: flex;
-    gap: 18px;
-    padding-bottom: 6px;
-  }
-
-  nav.menu a {
-    flex: 0 0 auto;
-    font-size: 16px;
-    padding: 10px 12px;
-  }
-
-  .busca {
-    width: 100%;
-    padding: 12px 16px;
-  }
-
-  .busca input {
-    width: 100%;
-    font-size: 16px;
-  }
-
+/* BOTÕES */
+.botao-vermelho{
+  background:var(--botao-vermelho);
+  color:white;
+  padding:10px 14px;
+  border-radius:8px;
+  font-size:var(--fonte-peq);
+  font-weight:700;
+  transition:0.15s;
+  text-align:center;
 }
 
-
+.botao-vermelho:hover{
+  background:var(--botao-vermelho-hover);
+  transform:translateY(-3px);
 }
 
+.botao-borda{
+  border:1px solid var(--botao-borda);
+  padding:10px 14px;
+  border-radius:8px;
+  font-weight:700;
+  font-size:var(--fonte-peq);
+}
 
+/* ================================
+   RESPONSIVIDADE — MOBILE
+   ================================ */
+@media (max-width: 900px){
 
+  /* GRID vira 1 coluna */
+  .layout{
+    grid-template-columns:1fr;
+  }
+
+  /* Sidebar vai para baixo */
+  .lateral{
+    margin-top:20px;
+  }
+
+  /* Cursos vira 2 colunas */
+  .cursos{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width: 600px){
+
+  /* Cursos vira 1 coluna */
+  .cursos{
+    grid-template-columns:1fr;
+  }
+
+  /* Header mais compacto */
+  .topo-cabecalho{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  nav.menu{
+    width:100%;
+    overflow-x:auto;
+    gap:12px;
+    justify-content:flex-start;
+  }
+
+  .busca{
+    width:100%;
+  }
+}
 
 </style>
 </head>
@@ -366,34 +313,30 @@ nav.menu a:hover{
 <body>
 <div class="container">
 
-<!-- HEADER ---------------------------->
+<!-- HEADER -->
 <header class="cabecalho">
 
   <div class="topo-cabecalho">
 
     <div class="logo-area">
       <div class="logo">
-       <img src="./imagens/logo.png" style="width:100%;height:100%;object-fit:cover;">
-
-     
+        <img src="./imagens/logo.png" style="width:100%;height:100%;object-fit:cover;">
+      </div>
     </div>
 
     <nav class="menu">
-  <a href="#sobre-nos">Sobre nós</a>
-  <a href="#receita">Receitas</a>
-  <a href="#cursos">Cursos</a>
-  <a href="#contatos">Contatos</a>
+      <a href="#sobre-nos">Sobre nós</a>
+      <a href="#receita">Receitas</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#contatos">Contatos</a>
     </nav>
 
-
-   <div class="busca">
-  <svg width="18" height="18" fill="#8C897F" style="min-width:18px;">
-    <path d="M11.742 10.344l3.387 3.387-1.398 1.398-3.387-3.387A6.5 6.5 0 1 1 11.742 10.344zM6.5 11A4.5 4.5 0 1 0 6.5 2a4.5 4.5 0 0 0 0 9z"/>
-  </svg>
-
-  <input placeholder="Procurar receita...">
-</div>
-
+    <div class="busca">
+      <svg width="18" height="18" fill="#8C897F">
+        <path d="M11.742 10.344l3.387 3.387-1.398 1.398-3.387-3.387A6.5 6.5 0 1 1 11.742 10.344zM6.5 11A4.5 4.5 0 1 0 6.5 2a4.5 4.5 0 0 0 0 9z"/>
+      </svg>
+      <input placeholder="Procurar receita...">
+    </div>
 
   </div>
 
@@ -411,19 +354,15 @@ nav.menu a:hover{
 
 <div class="breadcrumb">Receitas > Massas > Lasanha à Bolonhesa</div>
 
-<!-- LAYOUT ---------------------------------->
+<!-- LAYOUT PRINCIPAL -->
 <div class="layout">
 
-  <!-- RECEITA (ESQUERDA) -->
   <article class="receita" id="receita">
-
 
     <h2>Lasanha à Bolonhesa</h2>
     <div class="meta">Tempo total: 60 minutos</div>
 
-   <div class="imagem-principal"
-      style="background-image:url('./imagens/lasanha.png');"></div>
-
+    <div class="imagem-principal" style="background-image:url('./imagens/lasanha.png');"></div>
 
     <p style="color:var(--muted);margin-top:10px;">
       Lasanha caseira prática, saborosa e com molho bolonhesa tradicional feito na panela.
@@ -453,6 +392,7 @@ nav.menu a:hover{
           <div class="thumb" style="background-image:url('./imagens/1.png');"></div>
           <p><strong>1.</strong> Refogue a carne moída até dourar bem.</p>
         </div>
+
         <div class="passo">
           <div class="thumb" style="background-image:url('./imagens/2.png');"></div>
           <p><strong>2.</strong> Tempere com sal, pimenta-do-reino e orégano.</p>
@@ -488,15 +428,12 @@ nav.menu a:hover{
           <p><strong>8.</strong> Leve ao forno preaquecido a 200°C por 20–25 minutos.</p>
         </div>
 
-      </div><!-- fim passos -->
-    </div><!-- fim caixa -->
+      </div>
+    </div>
 
-  </article><!-- fim da receita -->
+  </article>
 
-
-  <!-- =========================================
-       COLUNA DIREITA (somente OUTRAS RECEITAS)
-       ========================================= -->
+  <!-- SIDEBAR -->
   <aside class="lateral">
 
     <div class="bloco">
@@ -531,18 +468,12 @@ nav.menu a:hover{
 
   </aside>
 
-</div><!-- fim layout -->
-
-
-
-<!-- ======================================================
-     AGORA VEM O RESTANTE (ABAIXO DA RECEITA)
-     ====================================================== -->
+</div>
 
 <!-- QUEM SOMOS -->
 <div class="bloco" id="sobre-nos" style="margin-top:32px;">
-
   <h4 style="margin-top:0;font-size:var(--fonte-grande)">Quem somos</h4>
+
   <p>
     Na Cazim, acreditamos que cozinhar é para todos. Criamos um espaço online que transforma a cozinha
     em um ambiente de aprendizado, criatividade e prazer. Produzimos aulas práticas, dicas e receitas 
@@ -552,84 +483,57 @@ nav.menu a:hover{
   <span class="botao-borda" style="margin-top:10px;">Saiba mais</span>
 </div>
 
-
-<!-- NOVOS CURSOS (agora com BOTÕES com HOVER igual aos outros!) -->
+<!-- CURSOS -->
 <div class="bloco" id="cursos" style="margin-top:22px;">
-
   <h4 style="margin-top:0;font-size:var(--fonte-grande)">Novos cursos</h4>
 
   <div class="cursos">
 
-    <!-- CURSO 1 -->
-   <div class="curso">
-  <div>
-    <h5 style="margin:0;">Alimentação saudável para quem mora sozinho</h5>
-
-    <ul>
-      <li>Estratégias para evitar o desperdício de alimentos</li>
-      <li>Técnicas culinárias para poupar tempo e dinheiro</li>
-      <li>Mais de 200 sugestões de receitas para quem mora sozinho</li>
-    </ul>
-
-    <div class="preco">R$ 316,00</div>
-  </div>
-
-  <span class="botao-vermelho" style="margin-top:10px; text-align:center;">
-    Degustar
-  </span>
-</div>
-
-
-    <!-- CURSO 2 -->
     <div class="curso">
-  <div>
-    <h5 style="margin:0;">Panificação básica</h5>
-
-    <ul>
-      <li>Técnicas tradicionais de panificação</li>
-      <li>Pães artesanais, dinamarqueses e regionais</li>
-      <li>Métodos de produção e fermentação de massas</li>
-    </ul>
-
-    <div class="preco">R$ 316,00</div>
-  </div>
-
-  <span class="botao-vermelho" style="margin-top:10px; text-align:center;">
-    Degustar
-  </span>
-</div>
-
-    <!-- CURSO 3 -->
-    <div class="curso">
-  <div>
-    <h5 style="margin:0;">Economizando na cozinha</h5>
-
-    <ul>
-      <li>Pratos balanceados com ingredientes simples</li>
-      <li>Economia de tempo e dinheiro na cozinha</li>
-      <li>Noções de grupos alimentares para montar refeições</li>
-      <li>Mais de 100 preparações práticas para o dia a dia</li>
-    </ul>
-
-    <div class="preco">R$ 316,00</div>
-  </div>
-
-  <span class="botao-vermelho" style="margin-top:10px; text-align:center;">
-    Degustar
-  </span>
-</div>
-
-      </span>
+      <div>
+        <h5 style="margin:0;">Alimentação saudável para quem mora sozinho</h5>
+        <ul>
+          <li>Estratégias para evitar o desperdício de alimentos</li>
+          <li>Técnicas culinárias para poupar tempo e dinheiro</li>
+          <li>Mais de 200 sugestões de receitas para quem mora sozinho</li>
+        </ul>
+        <div class="preco">R$ 316,00</div>
+      </div>
+      <span class="botao-vermelho">Degustar</span>
     </div>
 
-  </div><!-- fim cursos -->
+    <div class="curso">
+      <div>
+        <h5 style="margin:0;">Panificação básica</h5>
+        <ul>
+          <li>Técnicas tradicionais de panificação</li>
+          <li>Pães artesanais, dinamarqueses e regionais</li>
+          <li>Métodos de produção e fermentação de massas</li>
+        </ul>
+        <div class="preco">R$ 316,00</div>
+      </div>
+      <span class="botao-vermelho">Degustar</span>
+    </div>
+
+    <div class="curso">
+      <div>
+        <h5 style="margin:0;">Economizando na cozinha</h5>
+        <ul>
+          <li>Pratos balanceados com ingredientes simples</li>
+          <li>Economia de tempo e dinheiro na cozinha</li>
+          <li>Noções de grupos alimentares para montar refeições</li>
+          <li>Mais de 100 preparações práticas para o dia a dia</li>
+        </ul>
+        <div class="preco">R$ 316,00</div>
+      </div>
+      <span class="botao-vermelho">Degustar</span>
+    </div>
+
+  </div>
 </div>
 
-
-
 <!-- FOOTER -->
-<footer id="contatos" style="background:var(--footer-fundo);
-
+<footer id="contatos" style="
   background:var(--footer-fundo);
   text-align:center;
   padding:18px;
@@ -649,12 +553,12 @@ nav.menu a:hover{
 
   <div style="margin-top:10px; display:flex; justify-content:center; gap:12px;">
     <a href="https://instagram.com/Cazim_Receitas" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" style="width:22px;">
-</a>
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" style="width:22px;">
+    </a>
   </div>
 
 </footer>
 
-</div><!-- fim container -->
+</div>
 </body>
 </html>
