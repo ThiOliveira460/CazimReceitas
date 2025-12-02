@@ -222,6 +222,76 @@ nav.menu a:hover{
   background-size:cover;
   background-position:center;
 }
+
+/* RESPONSIVIDADE =========================== */
+@media (max-width: 768px){
+
+  /* Layout vira 1 coluna */
+  .layout{
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar vai para baixo */
+  .lateral{
+    order: 2;
+  }
+
+  /* Receita ocupa a largura toda */
+  .receita{
+    order: 1;
+  }
+
+  /* Header mais compacto */
+  header.cabecalho{
+    padding:14px;
+    gap:12px;
+  }
+
+  .topo-cabecalho{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  /* Menu vira 2 colunas */
+  nav.menu{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:12px;
+  }
+
+  /* Campo de busca ocupa tudo */
+  .busca{
+    width:100%;
+  }
+
+  .busca input{
+    width:100%;
+  }
+
+  /* Tags fazem wrap certinho */
+  .tags{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  /* Cursos empilham verticalmente */
+  .cursos{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .curso{
+    width:100%;
+  }
+
+  /* Imagem principal mais baixa */
+  .imagem-principal{
+    height:200px;
+  }
+
+}
+
 </style>
 </head>
 
