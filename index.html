@@ -7,33 +7,25 @@
 
 <style>
 
-/* PALETA */
 :root{
   --fundo: #ffffff;
   --header-fundo: #F1EEE5;
   --busca-fundo: #F5F3ED;
   --busca-borda: #D8D2C6;
-
   --tag-fundo: #9f2c0c;
   --tag-texto: #432811;
-
   --texto: #3B3A36;
   --muted: #6F6B63;
   --titulo: #2A2926;
-
   --botao-vermelho: #C74833;
   --botao-vermelho-hover: #A53B29;
   --botao-borda: #583200;
-
   --footer-fundo: #F2EBE3;
-
   --sombra: rgba(38,38,38,0.06);
-
   --fonte-base: 17px;
   --fonte-peq: 15px;
   --fonte-grande: 20px;
   --fonte-titulo: 30px;
-
   --maxw: 1100px;
 }
 
@@ -52,7 +44,6 @@ body{
 
 .container{ max-width:var(--maxw); margin:0 auto; }
 
-/* HEADER */
 header.cabecalho{
   background:var(--header-fundo);
   padding:18px 22px;
@@ -63,7 +54,6 @@ header.cabecalho{
   gap:16px;
 }
 
-/* topo: logo | menu | busca */
 .topo-cabecalho{
   display:flex;
   justify-content:space-between;
@@ -72,7 +62,6 @@ header.cabecalho{
   gap:14px;
 }
 
-/* LOGO */
 .logo-area {
   display: flex;
   align-items: center;
@@ -87,7 +76,6 @@ header.cabecalho{
   overflow:hidden;
 }
 
-/* MENU */
 nav.menu{
   display:flex;
   gap:20px;
@@ -112,7 +100,6 @@ nav.menu a:hover{
   color:#432811;
 }
 
-/* BUSCA */
 .busca{
   display:flex;
   align-items:center;
@@ -132,7 +119,6 @@ nav.menu a:hover{
   min-width:80px;
 }
 
-/* TAGS */
 .tags{ display:flex; gap:12px; overflow:auto; -webkit-overflow-scrolling:touch; padding-bottom:4px; }
 
 .tag{
@@ -150,14 +136,12 @@ nav.menu a:hover{
   color:#703400;
 }
 
-/* BREADCRUMB */
 .breadcrumb{
   margin:22px 0;
   font-size:var(--fonte-peq);
   color:var(--muted);
 }
 
-/* GRID PRINCIPAL */
 .layout{
   display:grid;
   grid-template-columns:1fr 300px;
@@ -165,7 +149,6 @@ nav.menu a:hover{
   align-items:start;
 }
 
-/* RECEITA */
 .receita{
   background:white;
   padding:20px;
@@ -189,7 +172,6 @@ nav.menu a:hover{
   background-position:center;
 }
 
-/* CAIXAS */
 .caixa{
   background:white;
   padding:16px;
@@ -209,7 +191,6 @@ nav.menu a:hover{
   background-position:center;
 }
 
-/* SIDEBAR — OUTRAS RECEITAS */
 .lateral{ display:flex; flex-direction:column; gap:18px; }
 
 .bloco{
@@ -243,7 +224,6 @@ nav.menu a:hover{
   background-position:center;
 }
 
-/* BOTÃO PADRÃO VERMELHO */
 .botao-vermelho{
   display:inline-block;
   padding:10px 18px;
@@ -263,7 +243,6 @@ nav.menu a:hover{
   background:var(--botao-vermelho-hover);
 }
 
-/* CURSOS */
 .cursos{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -286,11 +265,14 @@ nav.menu a:hover{
   margin-top:10px;
 }
 
-/* RESPONSIVIDADE */
+
+/* ======== MEDIA QUERY 1024px ======== */
 @media (max-width: 1024px) {
   .cursos{ grid-template-columns:repeat(2,1fr); }
 }
 
+
+/* ======== MEDIA QUERY 768px ======== */
 @media (max-width: 768px){
 
   .layout{ grid-template-columns: 1fr; }
@@ -358,6 +340,8 @@ nav.menu a:hover{
   .caixa, .bloco{ width:100%; }
 }
 
+
+/* ======== MEDIA QUERY 420px ======== */
 @media (max-width: 420px) {
   body{ padding:18px 12px; }
   .logo{ width:100px; height:100px; }
@@ -367,9 +351,6 @@ nav.menu a:hover{
   .thumb{ display:none; }
 }
 
-/* ================================
-   BOTÃO VOLTAR AO TOPO (NOVO)
-   ================================ */
 #voltar-topo{
   position: fixed;
   bottom: 22px;
@@ -400,7 +381,6 @@ nav.menu a:hover{
 <body>
 <a id="topo"></a>
 <div class="container">
-
 <!-- HEADER -->
 <header class="cabecalho">
   <div class="topo-cabecalho">
@@ -437,9 +417,9 @@ nav.menu a:hover{
     <div class="tag">Bolos</div>
   </div>
 </header>
+
 <div class="breadcrumb">Receitas &gt; Massas &gt; Lasanha à Bolonhesa</div>
 
-<!-- LAYOUT -->
 <div class="layout">
 
 <article class="receita" id="receita">
@@ -519,7 +499,6 @@ nav.menu a:hover{
   </div>
 </article>
 
-<!-- SIDEBAR -->
 <aside class="lateral">
 
   <div class="bloco">
@@ -554,9 +533,8 @@ nav.menu a:hover{
 
 </aside>
 
-</div><!-- layout -->
+</div>
 
-<!-- QUEM SOMOS -->
 <div class="bloco" id="sobre-nos" style="margin-top:32px;">
   <h4 style="margin-top:0;font-size:var(--fonte-grande)">Quem somos</h4>
 
@@ -568,7 +546,6 @@ nav.menu a:hover{
   <span class="botao-vermelho" style="margin-top:10px;">Saiba mais</span>
 </div>
 
-<!-- CURSOS -->
 <div class="bloco" id="cursos" style="margin-top:22px;">
   <h4 style="margin-top:0;font-size:var(--fonte-grande)">Novos cursos</h4>
 
@@ -582,7 +559,7 @@ nav.menu a:hover{
           <li>Técnicas rápidas</li>
           <li>200 receitas práticas</li>
         </ul>
-        <div class="preco">R$ 316,00</div>
+        <div class="preco">R$ 169,00</div>
       </div>
       <span class="botao-vermelho">Degustar</span>
     </div>
@@ -595,7 +572,7 @@ nav.menu a:hover{
           <li>Pães artesanais</li>
           <li>Fermentação caseira</li>
         </ul>
-        <div class="preco">R$ 316,00</div>
+        <div class="preco">R$ 129,99</div>
       </div>
       <span class="botao-vermelho">Degustar</span>
     </div>
@@ -608,7 +585,7 @@ nav.menu a:hover{
           <li>Economia de tempo e dinheiro</li>
           <li>Mais de 100 preparações</li>
         </ul>
-        <div class="preco">R$ 316,00</div>
+        <div class="preco">R$ 69,99</div>
       </div>
       <span class="botao-vermelho">Degustar</span>
     </div>
@@ -616,7 +593,6 @@ nav.menu a:hover{
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer id="contatos"
 style="background:var(--footer-fundo);
   text-align:center;
@@ -651,12 +627,8 @@ style="background:var(--footer-fundo);
 
 </footer>
 
-</div><!-- container -->
+</div>
 
-
-<!-- ===============================
-     BOTÃO VOLTAR AO TOPO
-     =============================== -->
 <a href="#topo" id="voltar-topo">↑</a>
 
 </body>
